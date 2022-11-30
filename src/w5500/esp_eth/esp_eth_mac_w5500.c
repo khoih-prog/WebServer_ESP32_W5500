@@ -688,7 +688,7 @@ static esp_err_t emac_w5500_enable_flow_ctrl(esp_eth_mac_t *mac, bool enable)
 
 static esp_err_t emac_w5500_set_peer_pause_ability(esp_eth_mac_t *mac, uint32_t ability)
 {
-  /* w5500 doesn't suppport PAUSE function, so accept any value */
+  /* w5500 doesn't support PAUSE function, so accept any value */
   return ESP_ERR_NOT_SUPPORTED;
 }
 
