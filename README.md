@@ -93,7 +93,7 @@ The library provides these features:
 4. HTTP(S) GET and POST requests, provides argument parsing, handles one client at a time.
 5. **High-level HTTP(S) (GET, POST, PUT, PATCH, DELETE), MQTT(S) and WebSocket Client**.
 
-Library is just a wrapper for:
+Library is providing similar functions to:
 
 1. [Ivan Grokhotkov's ESP32 WebServer](https://github.com/espressif/arduino-esp32/tree/master/libraries/WebServer)
 2. [HTTPClient Library](https://github.com/espressif/arduino-esp32/tree/master/libraries/HTTPClient)
