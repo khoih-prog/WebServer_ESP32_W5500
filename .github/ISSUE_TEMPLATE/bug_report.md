@@ -36,8 +36,8 @@ If applicable, add screenshots to help explain your problem.
 Please ensure to specify the following:
 
 * Arduino IDE version (e.g. 1.8.19) or Platform.io version
-* Board type (e.g. ESP32S3_DEV, ESP32S2_DEV, ESP32C3_DEV)
-* Board Core Version (e.g. ESP32 core v2.0.5)
+* Board type (e.g. ESP32_DEV)
+* Board Core Version (e.g. ESP32 core v2.0.6)
 * Contextual information (e.g. what you were trying to achieve)
 * Simplest possible steps to reproduce
 * Anything that might be relevant in your opinion, such as:
@@ -45,16 +45,16 @@ Please ensure to specify the following:
   * Network configuration
 
 
-Please be educated, civilized and constructive. Disrespective posts against [GitHub Code of Conduct](https://docs.github.com/en/site-policy/github-terms/github-event-code-of-conduct) will be ignored and deleted.
+Please be educated, civilized and constructive as you've always been. Disrespective posts against [GitHub Code of Conduct](https://docs.github.com/en/site-policy/github-terms/github-event-code-of-conduct) will be ignored and deleted.
 
 ### Example
 
 ```
 Arduino IDE version: 1.8.19
-ESP32S3_DEV board
-ESP32 core v2.0.5
+ESP32_DEV board
+ESP32 core v2.0.6
 OS: Ubuntu 20.04 LTS
-Linux xy-Inspiron-3593 5.15.0-56-generic #62~20.04.1-Ubuntu SMP Tue Nov 22 21:24:20 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+Linux xy-Inspiron-3593 5.15.0-57-generic #63~20.04.1-Ubuntu SMP Wed Nov 30 13:40:16 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
 
 Context:
 I encountered a crash while using this library
@@ -72,7 +72,7 @@ Steps to reproduce:
 
 Feel free to post feature requests. It's helpful if you can explain exactly why the feature would be useful.
 
-There are usually some outstanding feature requests in the [existing issues list](https://github.com/khoih-prog/WebServer_ESP32_SC_W5500/issues?q=is%3Aopen+is%3Aissue+label%3Aenhancement), feel free to add comments to them.
+There are usually some outstanding feature requests in the [existing issues list](https://github.com/khoih-prog/WebServer_ESP32_W5500/issues?q=is%3Aopen+is%3Aissue+label%3Aenhancement), feel free to add comments to them.
 
 ---
 
@@ -85,14 +85,13 @@ Please use the `astyle` to reformat the updated library code as follows (demo fo
 1. Change directory to the library GitHub
 
 ```
-xy@xy-Inspiron-3593:~$ cd Arduino/xy/WebServer_ESP32_SC_W5500_GitHub/
-xy@xy-Inspiron-3593:~/Arduino/xy/WebServer_ESP32_SC_W5500_GitHub$
+xy@xy-Inspiron-3593:~$ cd Arduino/xy/WebServer_ESP32_W5500_GitHub/
+xy@xy-Inspiron-3593:~/Arduino/xy/WebServer_ESP32_W5500_GitHub$
 ```
 
 2. Issue astyle command
 
 ```
-xy@xy-Inspiron-3593:~/Arduino/xy/WebServer_ESP32_SC_W5500_GitHub$ bash utils/restyle.sh
+xy@xy-Inspiron-3593:~/Arduino/xy/WebServer_ESP32_W5500_GitHub$ bash utils/restyle.sh
 ```
-
 
