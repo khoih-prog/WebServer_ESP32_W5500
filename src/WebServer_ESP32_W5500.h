@@ -9,11 +9,12 @@
   Built by Khoi Hoang https://github.com/khoih-prog/WebServer_ESP32_W5500
   Licensed under GPLv3 license
 
-  Version: 1.5.1
+  Version: 1.5.2
 
   Version Modified By   Date      Comments
   ------- -----------  ---------- -----------
   1.5.1   K Hoang      29/11/2022 Initial coding for ESP32_W5500 (ESP32 + W5500). Sync with WebServer_WT32_ETH01 v1.5.1
+  1.5.2   K Hoang      06/01/2023 Suppress compile error when using aggressive compile settings
  *****************************************************************************************************************************/
 
 #pragma once
@@ -31,20 +32,20 @@
     #warning Using code for ESP32 core v2.0.0+ in WebServer_ESP32_W5500.h
   #endif
 
-  #define WEBSERVER_ESP32_W5500_VERSION       "WebServer_ESP32_W5500 v1.5.1 for core v2.0.0+"
+  #define WEBSERVER_ESP32_W5500_VERSION       "WebServer_ESP32_W5500 v1.5.2 for core v2.0.0+"
 #else
   #if (_ETHERNET_WEBSERVER_LOGLEVEL_ > 3)
     #warning Using code for ESP32 core v1.0.6- in WebServer_ESP32_W5500.h
   #endif
 
-  #define WEBSERVER_ESP32_W5500_VERSION       "WebServer_ESP32_W5500 v1.5.1 for core v1.0.6-"
+  #define WEBSERVER_ESP32_W5500_VERSION       "WebServer_ESP32_W5500 v1.5.2 for core v1.0.6-"
 #endif
 
 #define WEBSERVER_ESP32_W5500_VERSION_MAJOR    1
 #define WEBSERVER_ESP32_W5500_VERSION_MINOR    5
-#define WEBSERVER_ESP32_W5500_VERSION_PATCH    1
+#define WEBSERVER_ESP32_W5500_VERSION_PATCH    2
 
-#define WEBSERVER_ESP32_W5500_VERSION_INT      1005001
+#define WEBSERVER_ESP32_W5500_VERSION_INT      1005002
 
 #if ESP32
 

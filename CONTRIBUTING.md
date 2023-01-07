@@ -15,7 +15,8 @@ If you don't find anything, please [open a new issue](https://github.com/khoih-p
 Please ensure to specify the following:
 
 * Arduino IDE version (e.g. 1.8.19) or Platform.io version
-* Board Core Version (e.g. ESP32 core v2.0.5)
+* Board type (e.g. ESP32_DEV)
+* Board Core Version (e.g. ESP32 core v2.0.6)
 * Contextual information (e.g. what you were trying to achieve)
 * Simplest possible steps to reproduce
 * Anything that might be relevant in your opinion, such as:
@@ -23,14 +24,16 @@ Please ensure to specify the following:
   * Network configuration
 
 
+Please be educated, civilized and constructive as you've always been. Disrespective posts against [GitHub Code of Conduct](https://docs.github.com/en/site-policy/github-terms/github-event-code-of-conduct) will be ignored and deleted.
+
 ### Example
 
 ```
 Arduino IDE version: 1.8.19
-WT32_ETH01 board
-ESP32 core v2.0.5
+ESP32_DEV board
+ESP32 core v2.0.6
 OS: Ubuntu 20.04 LTS
-Linux xy-Inspiron-3593 5.15.0-53-generic #59~20.04.1-Ubuntu SMP Thu Oct 20 15:10:22 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+Linux xy-Inspiron-3593 5.15.0-57-generic #63~20.04.1-Ubuntu SMP Wed Nov 30 13:40:16 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
 
 Context:
 I encountered a crash while using this library

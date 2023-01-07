@@ -9,6 +9,7 @@
 <a href="https://www.buymeacoffee.com/khoihprog6" title="Donate to my libraries using BuyMeACoffee"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Donate to my libraries using BuyMeACoffee" style="height: 50px !important;width: 181px !important;" ></a>
 <a href="https://www.buymeacoffee.com/khoihprog6" title="Donate to my libraries using BuyMeACoffee"><img src="https://img.shields.io/badge/buy%20me%20a%20coffee-donate-orange.svg?logo=buy-me-a-coffee&logoColor=FFDD00" style="height: 20px !important;width: 200px !important;" ></a>
 
+
 ---
 ---
 
@@ -103,6 +104,19 @@ This [**WebServer_ESP32_W5500** library](https://github.com/khoih-prog/WebServer
 
  1. **ESP32_DEV with W5500 boards** using `LwIP W5500 Ethernet`
 
+
+
+#### W5500
+
+<p align="center">
+    <img src="https://github.com/khoih-prog/WebServer_ESP32_W5500/raw/main/pics/W5500.png">
+</p>
+ 
+<p align="center">
+    <img src="https://github.com/khoih-prog/WebServer_ESP32_W5500/raw/main/pics/W5500_small.png">
+</p> 
+
+
 ---
 ---
 
@@ -110,7 +124,7 @@ This [**WebServer_ESP32_W5500** library](https://github.com/khoih-prog/WebServer
 ## Prerequisites
 
  1. [`Arduino IDE 1.8.19+` for Arduino](https://github.com/arduino/Arduino). [![GitHub release](https://img.shields.io/github/release/arduino/Arduino.svg)](https://github.com/arduino/Arduino/releases/latest)
- 2. [`ESP32 Core 2.0.5+`](https://github.com/espressif/arduino-esp32) for ESP32-based ESP32_DEV with W5500 boards. [![Latest release](https://img.shields.io/github/release/espressif/arduino-esp32.svg)](https://github.com/espressif/arduino-esp32/releases/latest/)
+ 2. [`ESP32 Core 2.0.6+`](https://github.com/espressif/arduino-esp32) for ESP32-based ESP32_DEV with W5500 boards. [![Latest release](https://img.shields.io/github/release/espressif/arduino-esp32.svg)](https://github.com/espressif/arduino-esp32/releases/latest/)
 
 
 ---
@@ -223,7 +237,7 @@ Look in file [**adc_common.c**](https://github.com/espressif/esp-idf/blob/master
 #### Class Constructor
 
 ```cpp
-  WebServer server(80);
+WebServer server(80);
 ```
 
 Creates the WebServer_ESP32_W5500 class object.
@@ -370,6 +384,51 @@ void collectHeaders();    // set the request headers to collect
 void serveStatic();
 size_t streamFile();
 ```
+
+
+---
+---
+
+### How to connect W5500 to ESP32
+
+You can change the `INT` pin to another one. Default is `GPIO4`
+
+```cpp
+// Must connect INT to GPIOxx or not working
+#define INT_GPIO            4
+```
+
+---
+
+#### W5500
+
+<p align="center">
+    <img src="https://github.com/khoih-prog/WebServer_ESP32_W5500/raw/main/pics/W5500.png">
+</p>
+ 
+<p align="center">
+    <img src="https://github.com/khoih-prog/WebServer_ESP32_W5500/raw/main/pics/W5500_small.png">
+</p> 
+ 
+---
+
+
+#### ESP32_DEV
+
+
+
+|W5500|<--->|ESP32|
+|:-:|:-:|:-:|
+|MOSI|<--->|GPIO23|
+|MISO|<--->|GPIO19|
+|SCK|<--->|GPIO18|
+|SS/CS|<--->|GPIO5|
+|INT|<--->|GPIO4|
+|RST|<--->|RST|
+|GND|<--->|GND|
+|3.3V|<--->|3.3V|
+
+
 ---
 ---
 
@@ -419,7 +478,7 @@ The following are debug terminal output and screen shot when running example [Ad
 
 ```cpp
 Start AdvancedWebServer on ESP32_DEV with ESP32_W5500
-WebServer_ESP32_W5500 v1.5.1 for core v2.0.0+
+WebServer_ESP32_W5500 v1.5.2 for core v2.0.0+
 [EWS] Default SPI pinout:
 [EWS] SPI_HOST: 2
 [EWS] MOSI: 23
@@ -447,7 +506,7 @@ The terminal output of **ESP32_DEV with W5500** running [MQTT_ThingStream exampl
 
 ```cpp
 Start MQTT_ThingStream on ESP32_DEV with ESP32_W5500
-WebServer_ESP32_W5500 v1.5.1 for core v2.0.0+
+WebServer_ESP32_W5500 v1.5.2 for core v2.0.0+
 [EWS] Default SPI pinout:
 [EWS] SPI_HOST: 2
 [EWS] MOSI: 23
@@ -480,7 +539,7 @@ The terminal output of **ESP32_DEV with W5500** running [MQTTClient_Auth example
 
 ```cpp
 Start MQTTClient_Auth on ESP32_DEV with ESP32_W5500
-WebServer_ESP32_W5500 v1.5.1 for core v2.0.0+
+WebServer_ESP32_W5500 v1.5.2 for core v2.0.0+
 [EWS] Default SPI pinout:
 [EWS] SPI_HOST: 2
 [EWS] MOSI: 23
@@ -510,7 +569,7 @@ The terminal output of **ESP32_DEV with W5500** running [MQTTClient_Basic exampl
 
 ```cpp
 Start MQTTClient_Basic on ESP32_DEV with ESP32_W5500
-WebServer_ESP32_W5500 v1.5.1 for core v2.0.0+
+WebServer_ESP32_W5500 v1.5.2 for core v2.0.0+
 [EWS] Default SPI pinout:
 [EWS] SPI_HOST: 2
 [EWS] MOSI: 23
@@ -541,7 +600,7 @@ The terminal output of **ESP32_DEV with W5500** running [WebClient example](exam
 
 ```cpp
 Start WebClient on ESP32_DEV with ESP32_W5500
-WebServer_ESP32_W5500 v1.5.1 for core v2.0.0+
+WebServer_ESP32_W5500 v1.5.2 for core v2.0.0+
 [EWS] Default SPI pinout:
 [EWS] SPI_HOST: 2
 [EWS] MOSI: 23
@@ -627,7 +686,7 @@ The terminal output of **ESP32_DEV with W5500** running [UDPSendReceive example]
 
 ```cpp
 Start UDPSendReceive on ESP32_DEV with ESP32_W5500
-WebServer_ESP32_W5500 v1.5.1 for core v2.0.0+
+WebServer_ESP32_W5500 v1.5.2 for core v2.0.0+
 [EWS] Default SPI pinout:
 [EWS] SPI_HOST: 2
 [EWS] MOSI: 23
@@ -713,6 +772,7 @@ Many thanks for everyone for bug reporting, new feature suggesting, testing and 
 ### Contributing
 
 If you want to contribute to this project:
+
 - Report bugs and errors
 - Ask for enhancements
 - Create issues and pull requests

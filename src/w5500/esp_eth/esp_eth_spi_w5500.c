@@ -9,11 +9,12 @@
   Built by Khoi Hoang https://github.com/khoih-prog/WebServer_ESP32_W5500
   Licensed under GPLv3 license
 
-  Version: 1.5.1
+  Version: 1.5.2
 
   Version Modified By   Date      Comments
   ------- -----------  ---------- -----------
   1.5.1   K Hoang      29/11/2022 Initial coding for ESP32_W5500 (ESP32 + W5500). Sync with WebServer_WT32_ETH01 v1.5.1
+  1.5.2   K Hoang      06/01/2023 Suppress compile error when using aggressive compile settings
  *****************************************************************************************************************************/
 
 #include <stdio.h>
@@ -42,8 +43,8 @@ esp_eth_mac_t* w5500_new_mac( spi_device_handle_t *spi_handle, int INT_GPIO )
 
   eth_mac_config_t mac_config = ETH_MAC_DEFAULT_CONFIG();
 
-  eth_phy_config_t phy_config = ETH_PHY_DEFAULT_CONFIG();
-  phy_config.reset_gpio_num = -1;
+  //eth_phy_config_t phy_config = ETH_PHY_DEFAULT_CONFIG();
+  //phy_config.reset_gpio_num = -1;
 
   mac_config.smi_mdc_gpio_num  = -1; // w5500 doesn't have SMI interface
   mac_config.smi_mdio_gpio_num = -1;

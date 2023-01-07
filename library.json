@@ -1,6 +1,6 @@
 {
   "name": "WebServer_ESP32_W5500",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "keywords": "WebServer, Ethernet, MQTT, MQTTS, HTTP, HTTPS, SSL, Arduino, ESP32, W5500, HTTP-Client, WebSocket-Client, MQTT-Client, server, client, websocket, LittleFS, SPIFFS, ThingStream",
   "description": "Simple Ethernet WebServer, HTTP/HTTPS Client wrapper library for ESP32 boards using W5500 with LwIP Ethernet library. The WebServer supports HTTP(S) GET and POST requests, provides argument parsing, handles one client at a time. It provides HTTP(S), MQTT(S) Client and supports WebServer serving from LittleFS/SPIFFS",
   "authors":
