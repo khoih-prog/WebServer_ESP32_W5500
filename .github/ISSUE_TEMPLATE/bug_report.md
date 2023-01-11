@@ -31,6 +31,8 @@ A clear and concise description of what you expected to happen.
 
 If applicable, add screenshots to help explain your problem.
 
+---
+
 ### Information
 
 Please ensure to specify the following:
@@ -46,6 +48,8 @@ Please ensure to specify the following:
 
 
 Please be educated, civilized and constructive as you've always been. Disrespective posts against [GitHub Code of Conduct](https://docs.github.com/en/site-policy/github-terms/github-event-code-of-conduct) will be ignored and deleted.
+
+---
 
 ### Example
 
