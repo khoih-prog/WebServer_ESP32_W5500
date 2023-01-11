@@ -9,12 +9,13 @@
   Built by Khoi Hoang https://github.com/khoih-prog/WebServer_ESP32_W5500
   Licensed under GPLv3 license
 
-  Version: 1.5.2
+  Version: 1.5.3
 
   Version Modified By   Date      Comments
   ------- -----------  ---------- -----------
   1.5.1   K Hoang      29/11/2022 Initial coding for ESP32_W5500 (ESP32 + W5500). Sync with WebServer_WT32_ETH01 v1.5.1
   1.5.2   K Hoang      06/01/2023 Suppress compile error when using aggressive compile settings
+  1.5.3   K Hoang      11/01/2023 Using `SPI_DMA_CH_AUTO` and built-in ESP32 MAC
  *****************************************************************************************************************************/
 
 #include "WebServer_ESP32_W5500_Debug.h"
@@ -65,7 +66,26 @@ bool ESP32_W5500::begin(int MISO, int MOSI, int SCLK, int CS, int INT, int SPICL
 {
   tcpipInit();
 
-  esp_base_mac_addr_set( W5500_Mac );
+  //esp_base_mac_addr_set( W5500_Mac );
+  
+  if ( esp_read_mac(mac_eth, ESP_MAC_ETH) == ESP_OK )
+  {
+    char macStr[18] = { 0 };
+
+    sprintf(macStr, "%02X:%02X:%02X:%02X:%02X:%02X", mac_eth[0], mac_eth[1], mac_eth[2],
+            mac_eth[3], mac_eth[4], mac_eth[5]);
+
+    ET_LOGINFO1("Using built-in mac_eth =", macStr);
+
+    esp_base_mac_addr_set( mac_eth );
+  }
+  else
+  {
+    ET_LOGINFO("Using user mac_eth");
+    memcpy(mac_eth, W5500_Mac, sizeof(mac_eth));
+
+    esp_base_mac_addr_set( W5500_Mac );
+  }
 
   tcpip_adapter_set_default_eth_handlers();
 
@@ -103,7 +123,7 @@ bool ESP32_W5500::begin(int MISO, int MOSI, int SCLK, int CS, int INT, int SPICL
     return false;
   }
 
-  eth_mac->set_addr(eth_mac, W5500_Mac);
+  eth_mac->set_addr(eth_mac, mac_eth);
 
 #if 1
 

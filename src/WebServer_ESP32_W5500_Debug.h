@@ -9,12 +9,13 @@
   Built by Khoi Hoang https://github.com/khoih-prog/WebServer_ESP32_W5500
   Licensed under GPLv3 license
 
-  Version: 1.5.2
+  Version: 1.5.3
 
   Version Modified By   Date      Comments
   ------- -----------  ---------- -----------
   1.5.1   K Hoang      29/11/2022 Initial coding for ESP32_W5500 (ESP32 + W5500). Sync with WebServer_WT32_ETH01 v1.5.1
   1.5.2   K Hoang      06/01/2023 Suppress compile error when using aggressive compile settings
+  1.5.3   K Hoang      11/01/2023 Using `SPI_DMA_CH_AUTO` and built-in ESP32 MAC
  *****************************************************************************************************************************/
 
 #pragma once
@@ -25,11 +26,15 @@
 #include <Arduino.h>
 #include <stdio.h>
 
+///////////////////////////////////////
+
 #ifdef DEBUG_ETHERNET_WEBSERVER_PORT
   #define ET_DEBUG_OUTPUT DEBUG_ETHERNET_WEBSERVER_PORT
 #else
   #define ET_DEBUG_OUTPUT Serial
 #endif
+
+///////////////////////////////////////
 
 // Change _ETHERNET_WEBSERVER_LOGLEVEL_ to set tracing and logging verbosity
 // 0: DISABLED: no logging
@@ -41,6 +46,8 @@
 #ifndef _ETHERNET_WEBSERVER_LOGLEVEL_
   #define _ETHERNET_WEBSERVER_LOGLEVEL_       0
 #endif
+
+///////////////////////////////////////
 
 const char EWS_MARK[]  = "[EWS] ";
 const char EWS_SPACE[] = " ";
@@ -96,6 +103,8 @@ const char EWS_LINE[]  = "========================================\n";
 #define ET_LOGDEBUG1(x,y)      if(_ETHERNET_WEBSERVER_LOGLEVEL_>3) { EWS_PRINT_MARK; EWS_PRINT(x); EWS_PRINT_SP; EWS_PRINTLN(y); }
 #define ET_LOGDEBUG2(x,y,z)    if(_ETHERNET_WEBSERVER_LOGLEVEL_>3) { EWS_PRINT_MARK; EWS_PRINT(x); EWS_PRINT_SP; EWS_PRINT(y); EWS_PRINT_SP; EWS_PRINTLN(z); }
 #define ET_LOGDEBUG3(x,y,z,w)  if(_ETHERNET_WEBSERVER_LOGLEVEL_>3) { EWS_PRINT_MARK; EWS_PRINT(x); EWS_PRINT_SP; EWS_PRINT(y); EWS_PRINT_SP; EWS_PRINT(z); EWS_PRINT_SP; EWS_PRINTLN(w); }
+
+///////////////////////////////////////
 
 #endif    // WEBSERVER_ESP32_W5500_DEBUG_H
 

@@ -9,12 +9,13 @@
   Built by Khoi Hoang https://github.com/khoih-prog/WebServer_ESP32_W5500
   Licensed under GPLv3 license
 
-  Version: 1.5.2
+  Version: 1.5.3
 
   Version Modified By   Date      Comments
   ------- -----------  ---------- -----------
   1.5.1   K Hoang      29/11/2022 Initial coding for ESP32_W5500 (ESP32 + W5500). Sync with WebServer_WT32_ETH01 v1.5.1
   1.5.2   K Hoang      06/01/2023 Suppress compile error when using aggressive compile settings
+  1.5.3   K Hoang      11/01/2023 Using `SPI_DMA_CH_AUTO` and built-in ESP32 MAC
  *****************************************************************************************************************************/
 
 #ifndef _ESP32_W5500_H_
@@ -43,6 +44,8 @@ class ESP32_W5500
   private:
     bool initialized;
     bool staticIP;
+    
+    uint8_t mac_eth[6] = { 0xFE, 0xED, 0xDE, 0xAD, 0xBE, 0xEF };
 
 #if ESP_IDF_VERSION_MAJOR > 3
     esp_eth_handle_t eth_handle;

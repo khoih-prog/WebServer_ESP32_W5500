@@ -10,6 +10,8 @@ However, before reporting a bug please check through the following:
 
 If you don't find anything, please [open a new issue](https://github.com/khoih-prog/WebServer_ESP32_W5500/issues/new).
 
+---
+
 ### How to submit a bug report
 
 Please ensure to specify the following:
@@ -25,6 +27,8 @@ Please ensure to specify the following:
 
 
 Please be educated, civilized and constructive as you've always been. Disrespective posts against [GitHub Code of Conduct](https://docs.github.com/en/site-policy/github-terms/github-event-code-of-conduct) will be ignored and deleted.
+
+---
 
 ### Example
 

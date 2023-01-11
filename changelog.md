@@ -16,6 +16,7 @@
 
 
 * [Changelog](#changelog)
+  * [Releases v1.5.3](#releases-v153)
   * [Releases v1.5.2](#releases-v152)
   * [Releases v1.5.1](#releases-v151)
 
@@ -23,6 +24,11 @@
 ---
 
 ## Changelog
+
+#### Releases v1.5.3
+
+1. Using `SPI_DMA_CH_AUTO` and built-in ESP32 MAC
+2. Improve library and examples code
 
 #### Releases v1.5.2
 
