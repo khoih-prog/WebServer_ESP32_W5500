@@ -98,6 +98,7 @@ Library is providing similar functions to:
 1. [Ivan Grokhotkov's ESP32 WebServer](https://github.com/espressif/arduino-esp32/tree/master/libraries/WebServer)
 2. [HTTPClient Library](https://github.com/espressif/arduino-esp32/tree/master/libraries/HTTPClient)
 
+---
 
 #### Currently supported Boards
 
@@ -105,7 +106,7 @@ This [**WebServer_ESP32_W5500** library](https://github.com/khoih-prog/WebServer
 
  1. **ESP32_DEV with W5500 boards** using `LwIP W5500 Ethernet`
 
-
+---
 
 #### W5500
 
@@ -462,7 +463,7 @@ You can change the `INT` pin to another one. Default is `GPIO4`
 #### File [AdvancedWebServer.ino](examples/AdvancedWebServer/AdvancedWebServer.ino)
 
 
-https://github.com/khoih-prog/WebServer_ESP32_W5500/blob/6bc89ead823ecaa55c0c1c154461094fd6774577/examples/AdvancedWebServer/AdvancedWebServer.ino#L41-L277
+https://github.com/khoih-prog/WebServer_ESP32_W5500/blob/c8bccad4dfff3a3e15611537fa023d6ea3c28937/examples/AdvancedWebServer/AdvancedWebServer.ino#L41-L275
 
 ---
 ---
@@ -479,7 +480,7 @@ The following are debug terminal output and screen shot when running example [Ad
 
 ```cpp
 Start AdvancedWebServer on ESP32_DEV with ESP32_W5500
-WebServer_ESP32_W5500 v1.5.2 for core v2.0.0+
+WebServer_ESP32_W5500 v1.5.3 for core v2.0.0+
 [EWS] Default SPI pinout:
 [EWS] SPI_HOST: 2
 [EWS] MOSI: 23
@@ -492,9 +493,9 @@ WebServer_ESP32_W5500 v1.5.2 for core v2.0.0+
 
 ETH Started
 ETH Connected
-ETH MAC: DE:AD:BE:EF:FE:09, IPv4: 192.168.2.94
+ETH MAC: B4:E6:2D:E9:68:AC, IPv4: 192.168.2.78
 FULL_DUPLEX, 100Mbps
-HTTP EthernetWebServer is @ IP : 192.168.2.94
+HTTP EthernetWebServer is @ IP : 192.168.2.78
 .......... .......... .......... .....
 ```
 
@@ -507,7 +508,7 @@ The terminal output of **ESP32_DEV with W5500** running [MQTT_ThingStream exampl
 
 ```cpp
 Start MQTT_ThingStream on ESP32_DEV with ESP32_W5500
-WebServer_ESP32_W5500 v1.5.2 for core v2.0.0+
+WebServer_ESP32_W5500 v1.5.3 for core v2.0.0+
 [EWS] Default SPI pinout:
 [EWS] SPI_HOST: 2
 [EWS] MOSI: 23
@@ -520,7 +521,7 @@ WebServer_ESP32_W5500 v1.5.2 for core v2.0.0+
 
 ETH Started
 ETH Connected
-ETH MAC: DE:AD:BE:EF:FE:09, IPv4: 192.168.2.94
+ETH MAC: B4:E6:2D:E9:68:AC, IPv4: 192.168.2.78
 FULL_DUPLEX, 100Mbps
 ***************************************
 ESP32_Pub
@@ -540,7 +541,7 @@ The terminal output of **ESP32_DEV with W5500** running [MQTTClient_Auth example
 
 ```cpp
 Start MQTTClient_Auth on ESP32_DEV with ESP32_W5500
-WebServer_ESP32_W5500 v1.5.2 for core v2.0.0+
+WebServer_ESP32_W5500 v1.5.3 for core v2.0.0+
 [EWS] Default SPI pinout:
 [EWS] SPI_HOST: 2
 [EWS] MOSI: 23
@@ -553,7 +554,7 @@ WebServer_ESP32_W5500 v1.5.2 for core v2.0.0+
 
 ETH Started
 ETH Connected
-ETH MAC: DE:AD:BE:EF:FE:09, IPv4: 192.168.2.94
+ETH MAC: B4:E6:2D:E9:68:AC, IPv4: 192.168.2.78
 FULL_DUPLEX, 100Mbps
 Attempting MQTT connection to broker.emqx.io...connected
 Message Send : MQTT_Pub => Hello from MQTTClient_Auth on ESP32_DEV with ESP32_W5500
@@ -570,7 +571,7 @@ The terminal output of **ESP32_DEV with W5500** running [MQTTClient_Basic exampl
 
 ```cpp
 Start MQTTClient_Basic on ESP32_DEV with ESP32_W5500
-WebServer_ESP32_W5500 v1.5.2 for core v2.0.0+
+WebServer_ESP32_W5500 v1.5.3 for core v2.0.0+
 [EWS] Default SPI pinout:
 [EWS] SPI_HOST: 2
 [EWS] MOSI: 23
@@ -583,7 +584,7 @@ WebServer_ESP32_W5500 v1.5.2 for core v2.0.0+
 
 ETH Started
 ETH Connected
-ETH MAC: DE:AD:BE:EF:FE:09, IPv4: 192.168.2.94
+ETH MAC: B4:E6:2D:E9:68:AC, IPv4: 192.168.2.78
 FULL_DUPLEX, 100Mbps
 Message Send : MQTT_Pub => Hello from MQTTClient_Basic on ESP32_DEV with ESP32_W5500
 Message arrived [MQTT_Pub] Hello from MQTTClient_Basic on ESP32_DEV with ESP32_W5500
@@ -601,7 +602,7 @@ The terminal output of **ESP32_DEV with W5500** running [WebClient example](exam
 
 ```cpp
 Start WebClient on ESP32_DEV with ESP32_W5500
-WebServer_ESP32_W5500 v1.5.2 for core v2.0.0+
+WebServer_ESP32_W5500 v1.5.3 for core v2.0.0+
 [EWS] Default SPI pinout:
 [EWS] SPI_HOST: 2
 [EWS] MOSI: 23
@@ -614,25 +615,25 @@ WebServer_ESP32_W5500 v1.5.2 for core v2.0.0+
 
 ETH Started
 ETH Connected
-ETH MAC: DE:AD:BE:EF:FE:09, IPv4: 192.168.2.94
+ETH MAC: B4:E6:2D:E9:68:AC, IPv4: 192.168.2.78
 FULL_DUPLEX, 100Mbps
 
 Starting connection to server...
 Connected to server
 HTTP/1.1 200 OK
-Date: Wed, 30 Nov 2022 04:52:20 GMT
+Date: Wed, 11 Jan 2023 19:19:39 GMT
 Content-Type: text/plain
 Content-Length: 2263
 Connection: close
-x-amz-id-2: q2XAqMZsvAMt59JeqIqDBiGSb+uvooIA75AooiEzXmX2OSoP9kBk8IXpNxPXRt3VSYzk+LKPNdA=
-x-amz-request-id: B67V69X1BDCKW1EQ
+x-amz-id-2: Tibw9r4/epZQzFM/rmO3cvTdq1DH4jSKocwQ9aMHx4RlkSotUFEGantuPNlKQKGqoHtdqwpFKw0=
+x-amz-request-id: SD2XWDHW10J2H90M
 Last-Modified: Wed, 23 Feb 2022 14:56:42 GMT
 ETag: "667cf48afcc12c38c8c1637947a04224"
 CF-Cache-Status: DYNAMIC
-Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=60ywObEEF1JnXxrXeDlAqTSdfdWxDa94yq5sDVdWCa5AjKoMSN9o79UGcq4%2B9NHdv0bt3pe22cNvmNjRlGX8wSLBUx%2BTs9jtybg0R1Ke0n8nA7PNC99HIBxqWy9Ru5o%3D"}],"group":"cf-nel","max_age":604800}
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=HDCMzIyDC7oeBtywXTEb50R8fKz1H%2B7cB18KeeJVTdmf6NrFvvbxfSPcInISlUQCNqHTVbYQp4rVNVXnwo8qvTMn8bP92ozfI53aScTnOJvPaBYaK4vOt%2FZxKfHsj3o%3D"}],"group":"cf-nel","max_age":604800}
 NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
 Server: cloudflare
-CF-RAY: 7720f918bc773ff2-YYZ
+CF-RAY: 78800158694b1839-EWR
 alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
 
 
@@ -687,7 +688,7 @@ The terminal output of **ESP32_DEV with W5500** running [UDPSendReceive example]
 
 ```cpp
 Start UDPSendReceive on ESP32_DEV with ESP32_W5500
-WebServer_ESP32_W5500 v1.5.2 for core v2.0.0+
+WebServer_ESP32_W5500 v1.5.3 for core v2.0.0+
 [EWS] Default SPI pinout:
 [EWS] SPI_HOST: 2
 [EWS] MOSI: 23
@@ -700,16 +701,16 @@ WebServer_ESP32_W5500 v1.5.2 for core v2.0.0+
 
 ETH Started
 ETH Connected
-ETH MAC: DE:AD:BE:EF:FE:09, IPv4: 192.168.2.94
+ETH MAC: B4:E6:2D:E9:68:AC, IPv4: 192.168.2.78
 FULL_DUPLEX, 100Mbps
 
 Starting connection to server...
 Listening on port 2390
 UDP Packet received, size 48
 From 132.163.97.3, port 123
-Seconds since Jan 1 1900 = 3878772695
-Unix time = 1669783895
-The UTC time is 4:51:35
+Seconds since Jan 1 1900 = 3882452857
+Unix time = 1673464057
+The UTC time is 19:07:37
 ```
 
 ---
@@ -750,7 +751,10 @@ Submit issues to: [WebServer_ESP32_W5500 issues](https://github.com/khoih-prog/W
 ### DONE
 
  1. Add support to ESP32-based **ESP32_DEV with W5500** using `LwIP W5500 Ethernet`
-
+ 2. Using `SPI_DMA_CH_AUTO`
+ 3. Using `ESP32` built-in ESP32 Ethernet `MAC Address`
+ 
+ 
 ---
 ---
 
