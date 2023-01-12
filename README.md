@@ -17,6 +17,7 @@
 
 * [Why do we need this WebServer_ESP32_W5500 library](#why-do-we-need-this-WebServer_ESP32_W5500-library)
   * [Features](#features)
+  * [Sibling libraries](#Sibling-libraries)
   * [Currently supported Boards](#currently-supported-boards)
 * [Changelog](changelog.md)
 * [Prerequisites](#prerequisites)
@@ -98,17 +99,81 @@ Library is providing similar functions to:
 1. [Ivan Grokhotkov's ESP32 WebServer](https://github.com/espressif/arduino-esp32/tree/master/libraries/WebServer)
 2. [HTTPClient Library](https://github.com/espressif/arduino-esp32/tree/master/libraries/HTTPClient)
 
+
 ---
+
+#### Sibling libraries
+
+Please also check these sibling libraries
+
+1. [WebServer_WT32_ETH01](https://github.com/khoih-prog/WebServer_WT32_ETH01) for ESP32-based `WT32_ETH01` using `LwIP LAN8720`
+2. [WebServer_ESP32_ENC](https://github.com/khoih-prog/WebServer_ESP32_ENC) for ESP32-boards using `LwIP ENC28J60`
+3. [WebServer_ESP32_W5500](https://github.com/khoih-prog/WebServer_ESP32_W5500) for ESP32-boards using `LwIP W5500`
+4. [WebServer_ESP32_W6100](https://github.com/khoih-prog/WebServer_ESP32_W6100) for ESP32-boards using `LwIP W6100`
+5. [WebServer_ESP32_SC_ENC](https://github.com/khoih-prog/WebServer_ESP32_SC_ENC) for ESP32_S3-boards using `LwIP ENC28J60`
+6. [WebServer_ESP32_SC_W5500](https://github.com/khoih-prog/WebServer_ESP32_SC_W5500) for ESP32_S3-boards using `LwIP W5500`
+7. [WebServer_ESP32_SC_W6100](https://github.com/khoih-prog/WebServer_ESP32_SC_W6100) for ESP32_S3-boards using `LwIP W6100`
+
+and more complex libraries for ESP32-based using `LwIP Ethernet`
+
+#### General Libraries
+
+ 1. [AsyncHTTPRequest_ESP32_Ethernet](https://github.com/khoih-prog/AsyncHTTPRequest_ESP32_Ethernet)
+ 2. [AsyncHTTPSRequest_ESP32_Ethernet](https://github.com/khoih-prog/AsyncHTTPSRequest_ESP32_Ethernet)
+ 3. [AsyncMQTT_ESP32](https://github.com/khoih-prog/AsyncMQTT_ESP32)
+ 4. [HTTPS_Server_Generic](https://github.com/khoih-prog/HTTPS_Server_Generic)
+ 
+#### ESP32_Ethernet_Manager Libraries
+ 
+ 1. [ESP32_ENC_Manager](https://github.com/khoih-prog/ESP32_ENC_Manager)
+ 2. [ESP32_W5500_Manager](https://github.com/khoih-prog/ESP32_W5500_Manager)
+ 3. [ESP32_Ethernet_Manager](https://github.com/khoih-prog/ESP32_Ethernet_Manager)
+ 4. [ESP32_SC_ENC_Manager](https://github.com/khoih-prog/ESP32_SC_ENC_Manager)
+ 5. [ESP32_SC_W5500_Manager](https://github.com/khoih-prog/ESP32_SC_W5500_Manager)
+ 6. [ESP32_SC_Ethernet_Manager](https://github.com/khoih-prog/ESP32_SC_Ethernet_Manager)
+ 
+#### AsyncESP32_Ethernet_Manager Libraries
+ 
+ 1. [AsyncESP32_ENC_Manager](https://github.com/khoih-prog/AsyncESP32_ENC_Manager)
+ 2. [AsyncESP32_W5500_Manager](https://github.com/khoih-prog/AsyncESP32_W5500_Manager)
+ 3. [AsyncESP32_Ethernet_Manager](https://github.com/khoih-prog/AsyncESP32_Ethernet_Manager)
+ 4. [AsyncESP32_SC_ENC_Manager](https://github.com/khoih-prog/AsyncESP32_SC_ENC_Manager)
+ 5. [AsyncESP32_SC_W5500_Manager](https://github.com/khoih-prog/AsyncESP32_SC_W5500_Manager)
+ 6. [AsyncESP32_SC_Ethernet_Manager](https://github.com/khoih-prog/AsyncESP32_SC_Ethernet_Manager)
+ 
+#### AsyncUDP_ESP32 Libraries
+ 
+ 1. [AsyncUDP_ESP32_ENC](https://github.com/khoih-prog/AsyncUDP_ESP32_ENC)
+ 2. [AsyncUDP_ESP32_W5500](https://github.com/khoih-prog/AsyncUDP_ESP32_W5500)
+ 3. [AsyncUDP_ESP32_W6100](https://github.com/khoih-prog/AsyncUDP_ESP32_W6100)
+ 4. [AsyncUDP_ESP32_Ethernet](https://github.com/khoih-prog/AsyncUDP_ESP32_Ethernet)
+ 5. [AsyncUDP_ESP32_SC_ENC](https://github.com/khoih-prog/AsyncUDP_ESP32_SC_ENC)
+ 6. [AsyncUDP_ESP32_SC_W5500](https://github.com/khoih-prog/AsyncUDP_ESP32_SC_W5500)
+ 7. [AsyncUDP_ESP32_SC_W6100](https://github.com/khoih-prog/AsyncUDP_ESP32_SC_W6100)
+ 8. [AsyncUDP_ESP32_SC_Ethernet](https://github.com/khoih-prog/AsyncUDP_ESP32_SC_Ethernet)
+
+#### AsyncDNSServer_ESP32 Libraries
+
+ 1. [AsyncDNSServer_ESP32_ENC](https://github.com/khoih-prog/AsyncDNSServer_ESP32_ENC)
+ 2. [AsyncDNSServer_ESP32_W5500](https://github.com/khoih-prog/AsyncDNSServer_ESP32_W5500)
+ 3. [AsyncDNSServer_ESP32_W6100](https://github.com/khoih-prog/AsyncDNSServer_ESP32_W6100)
+ 4. [AsyncDNSServer_ESP32_Ethernet](https://github.com/khoih-prog/AsyncDNSServer_ESP32_Ethernet)
+
+
+---
+
 
 #### Currently supported Boards
 
 This [**WebServer_ESP32_W5500** library](https://github.com/khoih-prog/WebServer_ESP32_W5500) currently supports these following boards:
 
- 1. **ESP32_DEV with W5500 boards** using `LwIP W5500 Ethernet`
+ 1. **ESP32_DEV** using `LwIP W5500 Ethernet`
 
 ---
 
 #### W5500
+
+`FULL_DUPLEX, 100Mbps`
 
 <p align="center">
     <img src="https://github.com/khoih-prog/WebServer_ESP32_W5500/raw/main/pics/W5500.png">
@@ -403,6 +468,8 @@ You can change the `INT` pin to another one. Default is `GPIO4`
 ---
 
 #### W5500
+
+`FULL_DUPLEX, 100Mbps`
 
 <p align="center">
     <img src="https://github.com/khoih-prog/WebServer_ESP32_W5500/raw/main/pics/W5500.png">
